@@ -2,13 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import { HomePage } from "./Components/Homepage";
+import Homepage from "./Components/Homepage";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} exact />
+        <Route path="/" element={<Homepage />} />
       </Routes>
     </Router>
   );

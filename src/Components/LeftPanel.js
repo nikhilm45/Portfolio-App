@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class LeftPanel extends Component {
-  render() {
-    return (
-            <div class="card">
-              <img src="/profile-pic.jpg" alt="Profile Pic" />
-              <p>Nikhilkumar Marathe</p>
-            </div>
-    );
-  }
+function LeftPanel() {
+  return (
+    <div class="card">
+      <img src="/profile-pic.jpg" alt="Profile Pic" />
+      <p>Nikhilkumar Marathe</p>
+    </div>
+  );
 }
+
+export default LeftPanel;
