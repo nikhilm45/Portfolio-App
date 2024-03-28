@@ -1,11 +1,43 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-export class RightPanel extends Component {
-  render() {
-    return (
-            <div class="card">
-              
-            </div>
-    );
-  }
+function RightPanel() {
+  const [currentNavItem, setCurrentNavItem] = useState("");
+
+  const handleNavClick = (navItem) => {
+    setCurrentNavItem(navItem);
+  };
+
+  return (
+    <div className="card">
+      <div className="header">
+        <h1 className="nav-title">{currentNavItem}</h1>
+        <nav className="navbar">
+          <ul style={{ listStyleType: "none", padding: 0 }}>
+            <li>
+              <button onClick={() => handleNavClick("About")}>
+                <span>About</span>
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleNavClick("Resume")}>
+                <span>Resume</span>
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleNavClick("Projects")}>
+                <span>Projects</span>
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleNavClick("Skills")}>
+                <span>Skills</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  );
 }
+
+export default RightPanel;
